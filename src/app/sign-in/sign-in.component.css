@@ -1,216 +1,240 @@
 .signArea {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(5px) brightness(30%);
-    font-family: "Poppins", serif;
-    z-index: 999;
-  
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(6px) brightness(35%);
+  font-family: "Poppins", sans-serif;
+  z-index: 999;
 }
 
+/* CARD */
 .card {
-    display: flex;
-    border-radius: 7px;
-    width: 50%;
-    background-color: white;
-    position: relative;
-    animation: smoothSlide 1s 1 forwards ease-in-out;
+  display: flex;
+  border-radius: 6px;
+  width: 50%;
+  background-color: #ffffff;
+  position: relative;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+  animation: smoothSlide 0.4s ease forwards;
+  overflow: hidden;
 }
 
+/* CLOSE BUTTON */
 .fa-x {
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-size: 20px;
-    width: 50px;
-    height: 30px;
-    background-color:#7C2AE6;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom-left-radius: 10px;
-    cursor: pointer;
-    transition: 0.2s;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 16px;
+  width: 45px;
+  height: 35px;
+  background-color: #111111;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
 .fa-x:hover {
-    background-color: red;
-    box-shadow: 0 2px 15px 1px red;
+  background-color: #C1121F;
 }
 
-
-
+/* FORM SIDE */
 form {
-    width: 50%;
-    height: 500px;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    position: relative;
+  width: 50%;
+  height: 500px;
+  padding: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  background-color: #ffffff;
 }
+
+/* ALERTS */
 small {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translate(-50%);
-    display: flex;
-    align-items: center;
-    gap: 5px;
-   
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  font-size: 13px;
 }
 
 .success {
-    color: green;
+  color: #2E7D32;
 }
 
 .err {
-    color: red;
+  color: #C1121F;
 }
 
+/* INPUT AREA */
 .area {
-    position: relative;
+  position: relative;
 }
 
 .area input {
-    width: 100%;
-    height: 35px;
-    border: none;
-    border-bottom: 2px solid grey;
-    padding-left: 35px;
-    outline: none;
-    font-family: "Poppins", serif;
-    font-size: 16px;
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+  padding-left: 38px;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+  transition: 0.3s ease;
+}
+
+.area input:focus {
+  border-bottom: 1px solid #111111;
 }
 
 input.ng-dirty.ng-invalid {
-    border-bottom: 2px solid red;
-}
-
-input::placeholder {
-    font-family: "Poppins", serif;
-    font-weight: 500;
+  border-bottom: 1px solid #C1121F;
 }
 
 .area i {
-    position: absolute;
-    top: 5px;
-    left: 3px;
-    color: #7C2AE6;
-    font-size: 20px;
+  position: absolute;
+  top: 11px;
+  left: 5px;
+  color: #9e9e9e;
+  font-size: 16px;
+  transition: 0.3s;
 }
 
-form p, form span {
-    color: #7C2AE6;
-    font-weight: 600;
-    cursor: pointer;
-    
+.area input:focus + i,
+.area input:focus ~ i {
+  color: #111111;
 }
 
+/* HEADINGS */
 form h1 {
-    position: relative;
-    font-weight: 600;
+  position: relative;
+  font-weight: 600;
+  color: #111111;
+  letter-spacing: 1px;
 }
 
 form h1::after {
-    content: "";
-    position: absolute;
-    width: 30px;
-    height: 3px;
-    background-color: #7C2AE6;
-    bottom: 0;
-    left: 0;
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 2px;
+  background-color: #C1121F;
+  bottom: -6px;
+  left: 0;
+}
+
+/* LINKS */
+form p,
+form span {
+  color: #111111;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+form span {
+  color: #C1121F;
+}
+
+form span:hover {
+  color: #9B0E18;
+}
+
+form p:hover {
+  color: #C1121F;
 }
 
 form h3 {
-    text-align: center;
-    font-size: 15px;
-    font-weight: 600;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+  color: #555;
 }
 
-
+/* BUTTON */
 form button {
-    height: 55px;
-    border: none;
-    border-radius: 5px;
-    background-color: #7C2AE6;
-    color: white;
-    font-size: 17px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.4s;
-}
-
-form button:disabled {
-    background-color: #22004e;
-    
-}
-form button:disabled:hover {
-    box-shadow: none;
-    background-color: #22004e;
+  height: 50px;
+  border: none;
+  border-radius: 2px;
+  background-color: #111111;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
 form button:hover {
-    background-color: #670bdf;
-    box-shadow: 0 0 10px 1px #7C2AE6;
+  background-color: #C1121F;
 }
 
-.rightBack {
-    width: 50%;
-    height: 500px;
-    background-image: url("/signinbanner.webp");
-    background-size: cover;
-    background-position: bottom;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-    padding: 70px;
-    
+form button:disabled {
+  background-color: #bdbdbd;
+  cursor: not-allowed;
+}
 
+/* RIGHT SIDE */
+.rightBack {
+  width: 50%;
+  height: 500px;
+  background-image: url("/signinbanner.webp");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding: 60px;
 }
 
 .rightBack::after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    background-color: #7C2AE6;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.4;
-    
-    
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.rightBack h1, .rightBack p {
-    color: white;
-    z-index: 1;
-    text-align: center;
-    font-weight: bold;
-    
+.rightBack h1,
+.rightBack p {
+  color: white;
+  z-index: 1;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
-
+/* RESPONSIVE */
 @media screen and (max-width: 998px) {
-    .card {
-        width: 70%;
-        transform: scale(0.6) !important;
-    }
+  .card {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .card {
-        flex-direction: column;
-    }
+  .card {
+    flex-direction: column;
+  }
 
-    form, .rightBack {
-        width: 100%;
-    }
+  form,
+  .rightBack {
+    width: 100%;
+    height: auto;
+  }
 }

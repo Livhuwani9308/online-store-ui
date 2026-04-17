@@ -19,6 +19,16 @@
     margin-inline:  auto;
 }
 
+:root {
+  --navbar-height: 69px;
+  --category-height: 50px;
+}
+
+.page-content {
+  padding-top: calc(var(--navbar-height) + var(--category-height));
+  min-height: 100vh;
+}
+
 @keyframes smoothSlide {
     0%{
         transform: translateY(-2000px);

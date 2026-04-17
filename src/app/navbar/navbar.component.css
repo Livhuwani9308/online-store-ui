@@ -1,57 +1,128 @@
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-    padding-inline: 30px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    backdrop-filter: brightness(90%) blur(5px);
-    transition: 0.5s;
-    z-index: 999999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  padding-inline: 40px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  z-index: 9999;
 }
 
-.navbarSolid {
-    background-color: white;
-    box-shadow:  0 0px 25px -4px rgb(229, 227, 227);
-    z-index: 1;
+/* LOGO */
+.logo img {
+  height: 45px;
+  cursor: pointer;
 }
 
-nav h1 {
-    font-family: "Ga Maamli", sans-serif;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    font-size: 30px;
-    cursor: pointer;
+/* SEARCH */
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 40%;
 }
 
-
-button img {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
+.search-container input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #000;
+  border-right: none;
+  outline: none;
+  border-radius: 0; /* pointy edges */
+  font-size: 14px;
 }
 
-nav .account {
-    display: flex;
+.search-container button {
+  padding: 10px 18px;
+  /* border: 1px solid #ddd; */
+  border-left: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 0; /* pointy edges */
+}
+
+/* ACCOUNT */
+.account {
+  display: flex;
+  gap: 10px;
+}
+
+.account button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 0; /* sharp edges */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: black;
+  color: white;
+  font-size: 13px;
+}
+
+.account button img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+/* CATEGORY LINKS */
+.category-links {
+  position: fixed;
+  top: 75px;
+  width: 100%;
+  background: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 12px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  z-index: 9998;
+}
+
+.category-links a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.category-links a:hover {
+  color: crimson;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 900px) {
+  .search-container {
+    width: 50%;
+  }
+
+  .category-links {
+    gap: 20px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  nav {
+    flex-direction: column;
+    height: auto;
     gap: 10px;
-}
+    padding: 15px;
+  }
 
-nav .account button {
-    padding: 8px 15px;
-    border: none;
-    border-radius: 7px;
-    cursor: pointer;
-    font-family: "Ga Maamli", sans-serif;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-}
+  .search-container {
+    width: 100%;
+  }
 
-
-@media screen and (max-width:800px) {
-    nav h1 {
-        font-size: 25px;
-    }
+  .category-links {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
 }
